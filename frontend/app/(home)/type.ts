@@ -23,6 +23,7 @@ export interface ProductItem {
   brand: string;
   description: string;
   image: string;
+  images?: string[];
   price?: string;
 }
 

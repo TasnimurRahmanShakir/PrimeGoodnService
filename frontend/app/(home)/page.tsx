@@ -5,6 +5,7 @@ import { BrandsSection } from "@/components/sections/brands-section";
 import { SectorsSection } from "@/components/sections/sectors-section";
 import { ProductsSection } from "@/components/sections/products-section";
 import { ProcessSection } from "@/components/sections/process-section";
+import { AboutUsSection } from "@/components/sections/about-us-section";
 import { FAQSection } from "@/components/sections/faq-section";
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <SectorsSection />
       <ProductsSection />
       <ProcessSection />
+      <AboutUsSection />
       <FAQSection />
     </div>
   );

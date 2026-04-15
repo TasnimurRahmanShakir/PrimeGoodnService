@@ -64,12 +64,12 @@
   --secondary-foreground: #0a2540;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
-  --accent: #dcb33b;
+  --accent: #e31837;
   /* Bright Gold from the Crown Supply design */
   --accent-foreground: #ffffff;
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #dcb33b;
+  --ring: #e31837;
   --radius: 0.5rem;
 }
 
@@ -86,11 +86,11 @@
   --secondary-foreground: #f8fafc;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
-  --accent: #dcb33b;
+  --accent: #e31837;
   --accent-foreground: #ffffff;
   --border: #334155;
   --input: #334155;
-  --ring: #dcb33b;
+  --ring: #e31837;
 }
 
 @layer base {
