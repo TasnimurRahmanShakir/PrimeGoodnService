@@ -6,10 +6,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { productTabs } from "@/lib/products";
 import Link from "next/link";
+import { useDraggableScroll } from "@/hooks/use-draggable-scroll";
 
 export function ProductsSection() {
+  const tabsListRef = useDraggableScroll();
+
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight uppercase">
           EXPLORE OUR <span className="text-primary">PRODUCTS</span>
@@ -21,9 +24,11 @@ export function ProductsSection() {
         </p>
       </div>
 
-      <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
         <Tabs defaultValue="health" className="w-full">
-          <TabsList className="flex flex-wrap h-auto bg-transparent justify-center gap-4 mb-16 border-none">
+          <TabsList
+            ref={tabsListRef as any}
+            className="flex flex-nowrap overflow-x-auto no-scrollbar h-auto bg-transparent justify-start md:justify-center gap-4 mb-16 border-none scroll-smooth w-full cursor-grab active:cursor-grabbing select-none">
             {productTabs.map((tab) => (
               <TabsTrigger
                 key={tab.id}
