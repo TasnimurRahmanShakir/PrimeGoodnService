@@ -29,7 +29,7 @@ export function ProcessSection() {
     <section className="relative overflow-hidden bg-white">
       {/* Background Split - 50/50 for desktop */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="h-full w-full lg:w-1/2 bg-primary" />
+        <div className="h-full w-full lg:w-1/2 bg-black" />
         <div className="h-full w-full lg:w-1/2 bg-white absolute top-0 right-0" />
       </div>
 

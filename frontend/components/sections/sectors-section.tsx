@@ -47,7 +47,7 @@ export function SectorsSection() {
       {/* Absolute Background Split (Precisely 50/50 of entire section height) */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="h-1/2 w-full bg-white" />
-        <div className="h-1/2 w-full bg-primary" />
+        <div className="h-1/2 w-full bg-black" />
       </div>
 
       {/* Content Layer */}

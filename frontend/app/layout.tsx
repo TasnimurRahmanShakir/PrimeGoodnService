@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/shared/header";
 import { Footer } from "@/components/shared/footer";
+import { FloatingWhatsapp } from "@/components/shared/floating-whatsapp";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <FloatingWhatsapp />
       </body>
     </html>
   );
