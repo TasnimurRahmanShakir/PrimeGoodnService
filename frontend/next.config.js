@@ -2,8 +2,8 @@
 const nextConfig = {
   reactCompiler: true,
   images: {
-    unoptimized: true,
-    qualities: [75, 90],
+    // unoptimized: true,
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",

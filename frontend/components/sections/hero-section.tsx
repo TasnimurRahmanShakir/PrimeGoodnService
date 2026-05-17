@@ -11,7 +11,7 @@ export function HeroSection() {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat grayscale-[60%]"
           style={{
-            backgroundImage: "url('/hero-bg.png')",
+            backgroundImage: "url('/hero-bg.webp')",
           }}>
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/70 mix-blend-multiply" />

@@ -24,7 +24,7 @@ export function StatsSection() {
       {/* Blue Tinted Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center grayscale-[50%]"
-        style={{ backgroundImage: "url('/hero-bg.png')" }}>
+        style={{ backgroundImage: "url('/hero-bg.webp')" }}>
         <div className="absolute inset-0 bg-black/80 mix-blend-multiply" />
       </div>
 

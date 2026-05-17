@@ -14,7 +14,7 @@ export default function CategoriesPage() {
         {/* Background Image with Dark Overlay */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center grayscale-[50%]"
-          style={{ backgroundImage: "url('/hero-bg.png')" }}
+          style={{ backgroundImage: "url('/hero-bg.webp')" }}
         >
           <div className="absolute inset-0 bg-black/80 mix-blend-multiply" />
         </div>

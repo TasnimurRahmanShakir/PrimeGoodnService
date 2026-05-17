@@ -48,7 +48,7 @@ export function AboutUsSection() {
           <div className="w-full lg:w-1/2 relative flex justify-center mt-12 lg:mt-0">
             <div className="relative w-full aspect-square max-w-lg rounded-2xl overflow-hidden shadow-2xl z-10">
               <Image
-                src="/hero-bg.png"
+                src="/hero-bg.webp"
                 alt="About Prime Distribution"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"

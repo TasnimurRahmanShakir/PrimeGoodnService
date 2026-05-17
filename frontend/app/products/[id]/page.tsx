@@ -102,16 +102,32 @@ Please provide more details on how to proceed.`;
         <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Left: Interactive Image Gallery */}
-            <ProductGallery 
-              images={product.images || [product.image]} 
-              name={product.name} 
-            />
+            <div className="flex-1">
+              <ProductGallery 
+                images={product.images || [product.image]} 
+                name={product.name} 
+                video={product.video}
+              />
+            </div>
 
             {/* Right: Product Info */}
             <div className="flex flex-col">
               <div className="mb-8">
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
-                  {product.brand}
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
+                    {product.brand}
+                  </div>
+                  {product.status && (
+                    <div
+                      className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
+                        product.status === "Approved"
+                          ? "bg-green-100 text-green-700"
+                          : "bg-orange-100 text-orange-700"
+                      }`}
+                    >
+                      {product.status}
+                    </div>
+                  )}
                 </div>
                 <h1 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter leading-[1.05] mb-4">
                   {product.name}
@@ -131,9 +147,11 @@ Please provide more details on how to proceed.`;
               <div className="space-y-8 mb-12">
                 <div>
                   <h3 className="text-sm font-black uppercase tracking-widest text-gray-900 mb-4 border-b border-gray-100 pb-2 inline-block">Description</h3>
-                  <p className="text-gray-600 leading-relaxed font-medium">
-                    {product.description}
-                  </p>
+                  <div className="text-gray-600 leading-relaxed font-medium space-y-4">
+                    {product.description.split('\n').map((paragraph, idx) => (
+                      paragraph.trim() ? <p key={idx}>{paragraph}</p> : null
+                    ))}
+                  </div>
                 </div>
                 
                 <div>
@@ -160,15 +178,13 @@ Please provide more details on how to proceed.`;
                   href={whatsappUrl} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex-[1.5]"
+                  className="w-full sm:flex-[1.5] flex items-center justify-center gap-2 h-16 bg-[#075E54] text-white hover:bg-[#054c44] font-black uppercase tracking-widest text-xs rounded-2xl shadow-xl shadow-green-900/10 transition-all active:scale-95 shrink-0"
                 >
-                  <Button size="lg" className="w-full h-16 bg-[#075E54] text-white hover:bg-[#054c44] font-black uppercase tracking-widest text-xs rounded-2xl shadow-xl shadow-green-900/10 transition-all active:scale-95 flex items-center justify-center gap-2">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.539 2.016 2.126-.54c.947.527 1.912.814 3.163.815 3.181 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.769-5.778zm3.387 7.464c-.12.401-.713.79-1.011.817-.297.027-.551.139-1.745-.333-1.457-.571-2.398-2.04-2.471-2.137-.073-.098-.593-.762-.593-1.455 0-.693.363-1.035.492-1.171.129-.136.28-.174.373-.174.093 0 .186.002.268.005.086.002.203-.032.317.234.117.272.399 1.002.433 1.074.034.072.057.155.008.252-.049.098-.073.158-.147.245-.074.086-.14.156-.217.243-.077.086-.156.177-.071.32.085.144.381.604.811 1.026.54.524 1.029.689 1.187.757.158.067.251.054.344-.05.093-.105.399-.46.505-.623.106-.163.212-.136.35-.086s.87.409.998.448c.128.039.214.058.245.111.031.053.031.252-.089.654z"/></svg>
-                    Order via WhatsApp
-                  </Button>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.539 2.016 2.126-.54c.947.527 1.912.814 3.163.815 3.181 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.769-5.778zm3.387 7.464c-.12.401-.713.79-1.011.817-.297.027-.551.139-1.745-.333-1.457-.571-2.398-2.04-2.471-2.137-.073-.098-.593-.762-.593-1.455 0-.693.363-1.035.492-1.171.129-.136.28-.174.373-.174.093 0 .186.002.268.005.086.002.203-.032.317.234.117.272.399 1.002.433 1.074.034.072.057.155.008.252-.049.098-.073.158-.147.245-.074.086-.14.156-.217.243-.077.086-.156.177-.071.32.085.144.381.604.811 1.026.54.524 1.029.689 1.187.757.158.067.251.054.344-.05.093-.105.399-.46.505-.623.106-.163.212-.136.35-.086s.87.409.998.448c.128.039.214.058.245.111.031.053.031.252-.089.654z"/></svg>
+                  Order via WhatsApp
                 </a>
-                <Link href="/apply" className="flex-1">
-                  <Button size="lg" variant="outline" className="w-full h-16 border-2 border-gray-100 hover:border-black hover:text-black font-black uppercase tracking-widest text-xs rounded-2xl transition-all active:scale-95">
+                <Link href="/apply" className="w-full sm:flex-1 shrink-0">
+                  <Button size="lg" variant="outline" className="w-full h-16 border-2 border-gray-100 hover:border-black hover:text-black font-black uppercase tracking-widest text-xs rounded-2xl transition-all active:scale-95 shrink-0">
                     Become a Partner
                   </Button>
                 </Link>
@@ -184,8 +200,36 @@ Please provide more details on how to proceed.`;
                 {relatedProducts.map((rel) => (
                   <Link key={rel.id} href={`/products/${rel.id}`} className="group">
                     <div className="bg-white rounded-[1.5rem] border border-gray-100 p-4 transition-all duration-300 hover:shadow-xl group-hover:-translate-y-1">
-                      <div className="relative aspect-square bg-[#f6f7f8] rounded-2xl overflow-hidden mb-4 p-4">
-                        <Image src={rel.image} alt={rel.name} fill className="object-contain" />
+                      <div className="relative aspect-square bg-[#f6f7f8] rounded-2xl overflow-hidden mb-4 p-4 flex items-center justify-center">
+                        {rel.status && (
+                          <div
+                            className={`absolute top-5 -left-10 -rotate-45 w-36 text-center text-[10px] font-black py-1 tracking-wider z-10 shadow-md ${
+                              rel.status === "Approved"
+                                ? "bg-green-500 text-white"
+                                : "bg-orange-500 text-white"
+                            }`}
+                          >
+                            {rel.status.toUpperCase()}
+                          </div>
+                        )}
+                        <Image
+                          src={rel.image}
+                          alt={rel.name}
+                          fill
+                          className={`object-contain p-4 transition-all duration-700 ${
+                            rel.hoverImage
+                              ? "group-hover:opacity-0 group-hover:scale-95"
+                              : "group-hover:scale-105"
+                          }`}
+                        />
+                        {rel.hoverImage && (
+                          <Image
+                            src={rel.hoverImage}
+                            alt={`${rel.name} hover`}
+                            fill
+                            className="object-contain p-4 absolute inset-0 opacity-0 scale-105 transition-all duration-700 group-hover:opacity-100 group-hover:scale-100"
+                          />
+                        )}
                       </div>
                       <h4 className="font-bold text-gray-900 mb-1 truncate">{rel.name}</h4>
                       <p className="text-xs font-bold text-primary uppercase mb-2">{rel.brand}</p>

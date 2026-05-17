@@ -7,42 +7,42 @@ const sectors: SectorItem[] = [
     title: "Health and Supplements",
     description:
       "Premium distribution of vitamins, healthcare products, and pharmaceutical goods.",
-    image: "/sector-health.png",
+    image: "/sector-health.webp",
     icon: "health",
   },
   {
     title: "Beauty & Personal Care",
     description:
       "Leading brands in skincare, cosmetics, and personal grooming for global markets.",
-    image: "/sector-beauty.png",
+    image: "/sector-beauty.webp",
     icon: "beauty",
   },
   {
     title: "Grocery & Food Retail",
     description:
       "Reliable supply chain for fresh produce, packaged goods, and retail essentials.",
-    image: "/sector-grocery.png",
+    image: "/sector-grocery.webp",
     icon: "grocery",
   },
   {
     title: "Premium Gardening Tool",
     description:
       "High-quality tools and equipment for professional landscaping and home gardening.",
-    image: "/sector-garden.png",
+    image: "/sector-garden.webp",
     icon: "home",
   },
   {
     title: "Consumer Electronics",
     description:
       "State-of-the-art audio equipment, accessories, and home technology solutions.",
-    image: "/sector-electronics.png",
+    image: "/sector-electronics.webp",
     icon: "electronics",
   },
   {
     title: "Automotive Parts",
     description:
       "Specialized distribution of engine parts, performance tools, and car accessories.",
-    image: "/sector-automotive.png",
+    image: "/sector-automotive.webp",
     icon: "automotive",
   },
 ];

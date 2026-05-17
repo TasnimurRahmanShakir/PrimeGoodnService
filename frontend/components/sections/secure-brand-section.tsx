@@ -36,7 +36,7 @@ export function SecureBrandSection() {
             <div className="absolute -inset-4 bg-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl w-fit mx-auto">
               <Image
-                src="/secure-brand.png"
+                src="/secure-brand.webp"
                 alt="Our distribution process"
                 width={600}
                 height={500}

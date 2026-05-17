@@ -4,22 +4,22 @@ const teamMembers = [
   {
     name: "David Reynolds",
     role: "Chief Executive Officer",
-    image: "/team-ceo.png",
+    image: "/team-ceo.webp",
   },
   {
     name: "Elena Rodriguez",
     role: "Director of Operations",
-    image: "/team-director.png",
+    image: "/team-director.webp",
   },
   {
     name: "Marcus Thorne",
     role: "Head of Logistics",
-    image: "/team-logistics.png",
+    image: "/team-logistics.webp",
   },
   {
     name: "Sophia Sterling",
     role: "Brand Partnership Manager",
-    image: "/team-brand.png",
+    image: "/team-brand.webp",
   },
 ];
 
@@ -48,6 +48,7 @@ export function TeamSection() {
                   src={member.image} 
                   alt={member.name} 
                   fill 
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 {/* Overlay with primary accent border on hover */}

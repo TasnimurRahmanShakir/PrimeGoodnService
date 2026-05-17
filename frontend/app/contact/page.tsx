@@ -11,7 +11,7 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 bg-black text-white">
-        <div className="absolute inset-0 z-0 opacity-20 grayscale" style={{ backgroundImage: "url('/hero-bg.png')", backgroundSize: 'cover' }} />
+        <div className="absolute inset-0 z-0 opacity-20 grayscale" style={{ backgroundImage: "url('/hero-bg.webp')", backgroundSize: 'cover' }} />
         <div className="container relative z-10 max-w-[1400px] mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">Contact <span className="text-primary italic">Us</span></h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">Have questions about our distribution network or partnership programs? Reach out to our team today.</p>

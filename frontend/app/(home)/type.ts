@@ -23,8 +23,11 @@ export interface ProductItem {
   brand: string;
   description: string;
   image: string;
+  hoverImage?: string;
   images?: string[];
+  video?: string;
   price?: string;
+  status?: "" | "Under Approval";
 }
 
 export interface ProductTab {

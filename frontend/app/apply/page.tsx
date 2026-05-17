@@ -14,7 +14,7 @@ export default function ApplyPage() {
         {/* Subtle Background pattern/image */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center opacity-30 grayscale"
-          style={{ backgroundImage: "url('/hero-bg.png')" }}
+          style={{ backgroundImage: "url('/hero-bg.webp')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black" />
         </div>

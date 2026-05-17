@@ -6,32 +6,32 @@ import { Icon } from "@/components/icons";
 const categories = [
   {
     title: "Health and Supplements",
-    image: "/sector-health.png",
+    image: "/sector-health.webp",
     icon: "health",
   },
   {
     title: "Beauty & Personal Care",
-    image: "/sector-beauty.png",
+    image: "/sector-beauty.webp",
     icon: "beauty",
   },
   {
     title: "Grocery & Food Retail",
-    image: "/sector-grocery.png",
+    image: "/sector-grocery.webp",
     icon: "grocery",
   },
   {
     title: "Premium Gardening Tool",
-    image: "/sector-garden.png",
+    image: "/sector-garden.webp",
     icon: "home",
   },
   {
     title: "Consumer Electronics",
-    image: "/sector-electronics.png",
+    image: "/sector-electronics.webp",
     icon: "electronics",
   },
   {
     title: "Automotive Parts",
-    image: "/sector-automotive.png",
+    image: "/sector-automotive.webp",
     icon: "automotive",
   },
 ];

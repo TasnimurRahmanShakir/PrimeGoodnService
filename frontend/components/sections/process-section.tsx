@@ -80,7 +80,7 @@ export function ProcessSection() {
           <div className="w-full lg:w-1/2 relative flex items-center pr-4">
             <div className="relative w-full aspect-[4/3] lg:aspect-[1.4/1] rounded-sm overflow-hidden shadow-[10px_30px_70px_rgba(0,0,0,0.3)] lg:-ml-24 lg:translate-y-4 z-20">
               <Image
-                src="/process.png"
+                src="/process.webp"
                 alt="Our brand partnership process team meeting"
                 fill
                 className="object-cover"
