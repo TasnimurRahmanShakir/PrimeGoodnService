@@ -119,11 +119,7 @@ Please provide more details on how to proceed.`;
                   </div>
                   {product.status && (
                     <div
-                      className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
-                        product.status === "Approved"
-                          ? "bg-green-100 text-green-700"
-                          : "bg-orange-100 text-orange-700"
-                      }`}
+                      className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-orange-100 text-orange-700"
                     >
                       {product.status}
                     </div>
@@ -203,11 +199,7 @@ Please provide more details on how to proceed.`;
                       <div className="relative aspect-square bg-[#f6f7f8] rounded-2xl overflow-hidden mb-4 p-4 flex items-center justify-center">
                         {rel.status && (
                           <div
-                            className={`absolute top-5 -left-10 -rotate-45 w-36 text-center text-[10px] font-black py-1 tracking-wider z-10 shadow-md ${
-                              rel.status === "Approved"
-                                ? "bg-green-500 text-white"
-                                : "bg-orange-500 text-white"
-                            }`}
+                            className="absolute top-5 -left-10 -rotate-45 w-36 text-center text-[10px] font-black py-1 tracking-wider z-10 shadow-md bg-orange-500 text-white"
                           >
                             {rel.status.toUpperCase()}
                           </div>

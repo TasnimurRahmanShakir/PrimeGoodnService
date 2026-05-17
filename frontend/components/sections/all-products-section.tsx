@@ -53,11 +53,7 @@ export function AllProductsSection() {
                 {/* Status Badge (Top Left, 45 deg angle) */}
                 {product.status && (
                   <div
-                    className={`absolute top-6 -left-10 -rotate-45 w-40 text-center text-[10px] font-black py-1.5 tracking-wider z-10 shadow-md ${
-                      product.status === "Approved"
-                        ? "bg-green-500 text-white"
-                        : "bg-orange-500 text-white"
-                    }`}
+                    className="absolute top-6 -left-10 -rotate-45 w-40 text-center text-[10px] font-black py-1.5 tracking-wider z-10 shadow-md bg-orange-500 text-white"
                   >
                     {product.status.toUpperCase()}
                   </div>
