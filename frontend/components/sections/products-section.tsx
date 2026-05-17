@@ -28,13 +28,16 @@ export function ProductsSection() {
         <Tabs defaultValue="all" className="w-full">
           <TabsList
             ref={tabsListRef as any}
-            className="flex flex-nowrap overflow-x-auto no-scrollbar h-auto bg-transparent justify-start md:justify-center gap-4 mb-16 border-none scroll-smooth w-full cursor-grab active:cursor-grabbing select-none">
+            className="flex flex-nowrap overflow-x-auto no-scrollbar h-auto bg-transparent justify-start md:justify-center gap-4 mb-16 border-none scroll-smooth w-full cursor-grab active:cursor-grabbing select-none px-4">
             {productTabs.map((tab) => (
               <TabsTrigger
                 key={tab.id}
                 value={tab.id}
-                className="px-6 py-2.5 rounded-full border border-gray-200 bg-white text-gray-900 data-[state=active]:bg-accent data-[state=active]:text-white data-[state=active]:border-accent transition-all duration-300 text-sm font-bold shadow-sm hover:border-accent hover:text-accent hover:-translate-y-0.5 active:scale-95 cursor-pointer">
-                {tab.label}
+                className="group px-7 py-3 rounded-full border-2 border-slate-200/60 bg-slate-50 text-slate-700 data-[active]:bg-primary data-[active]:text-white data-[active]:border-primary data-[active]:shadow-lg data-[active]:shadow-primary/20 data-active:bg-primary data-active:text-white data-active:border-primary data-active:shadow-lg data-active:shadow-primary/20 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-primary data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20 transition-all duration-300 text-sm font-bold tracking-wide hover:bg-white hover:text-primary hover:border-primary/30 hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 active:scale-95 cursor-pointer flex items-center gap-2.5 whitespace-nowrap shrink-0">
+                <span>{tab.label}</span>
+                <span className="inline-flex items-center justify-center px-2 py-0.5 text-[10px] font-black rounded-full transition-all duration-300 bg-slate-200/60 text-slate-500 group-hover:bg-slate-100 group-hover:text-primary group-data-[active]:bg-white/25 group-data-[active]:text-white group-data-active:bg-white/25 group-data-active:text-white group-data-[state=active]:bg-white/25 group-data-[state=active]:text-white">
+                  {tab.products.length}
+                </span>
               </TabsTrigger>
             ))}
           </TabsList>
@@ -52,11 +55,10 @@ export function ProductsSection() {
                       {/* Status Badge (Top Left, 45 deg angle) */}
                       {product.status && (
                         <div
-                          className={`absolute top-6 -left-10 -rotate-45 w-40 text-center text-[10px] font-black py-1.5 tracking-wider z-10 shadow-md ${
-                            product.status === "Approved"
-                              ? "bg-green-500 text-white"
-                              : "bg-orange-500 text-white"
-                          }`}
+                          className={`absolute top-6 -left-10 -rotate-45 w-40 text-center text-[10px] font-black py-1.5 tracking-wider z-10 shadow-md ${product.status === "Under Approval"
+                              ? "bg-orange-500 text-white"
+                              : "bg-green-500 text-white"
+                            }`}
                         >
                           {product.status.toUpperCase()}
                         </div>
@@ -67,11 +69,10 @@ export function ProductsSection() {
                         alt={product.name}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className={`object-contain p-4 transition-all duration-700 ${
-                          product.hoverImage
+                        className={`object-contain p-4 transition-all duration-700 ${product.hoverImage
                             ? "group-hover:opacity-0 group-hover:scale-95"
                             : "group-hover:scale-105"
-                        }`}
+                          }`}
                       />
                       {product.hoverImage && (
                         <Image

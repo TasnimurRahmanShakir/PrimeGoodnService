@@ -83,6 +83,7 @@ export function ProcessSection() {
                 src="/process.webp"
                 alt="Our brand partnership process team meeting"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
                 priority
               />
